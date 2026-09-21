@@ -1,0 +1,39 @@
+name: StateTree validation
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-sdk-suite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    env:
+      OTEL_SDK_DISABLED: 'true'
+      AWS_EC2_METADATA_DISABLED: 'true'
+      CREWAI_TELEMETRY_ENABLED: 'false'
+      CREWAI_TRACING_ENABLED: 'false'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install real pinned SDK and test dependencies
+        run: python -m pip install -e '.[sagemaker,test]'
+      - name: Run full suite, not only the local-core subset
+        run: python -m pytest -q
+      - name: Compile package and check browser JavaScript
+        run: |
+          python -m compileall -q statetree deploy benchmarks examples tests
+          node --check statetree/web/static/workbench.js
+      - name: Exercise local end-to-end demo without inference
+        run: python -m statetree demo --directory '${{ runner.temp }}/statetree-demo'
+      - name: Build installable wheel
+        run: python -m pip wheel . --no-deps --wheel-dir dist

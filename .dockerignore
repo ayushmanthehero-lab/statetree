@@ -1,0 +1,10 @@
+**
+!pyproject.toml
+!README.md
+!statetree/
+!statetree/**
+statetree/**/__pycache__/
+statetree/**/*.pyc
+!deploy/
+!deploy/hybrid_web/
+!deploy/hybrid_web/Dockerfile

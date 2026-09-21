@@ -1,0 +1,50 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_____ test_job_is_noninheritable_and_terminates_children_when_worker_exits _____
+
+    def test_job_is_noninheritable_and_terminates_children_when_worker_exits():
+>       m=module(); k=Kernel()
+          ^^^^^^^^
+
+tests/test_agentic_windows_job.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def module():
+>       assert importlib.util.find_spec('statetree.agentic.windows_job') is not None, 'Windows command containment is missing'
+E       AssertionError: Windows command containment is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa83831fb00>('statetree.agentic.windows_job')
+E        +    where <function find_spec at 0x7fa83831fb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_windows_job.py:7: AssertionError
+________________ test_assignment_failure_never_runs_uncontained ________________
+
+    def test_assignment_failure_never_runs_uncontained():
+>       m=module(); k=Kernel(assign=0)
+          ^^^^^^^^
+
+tests/test_agentic_windows_job.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def module():
+>       assert importlib.util.find_spec('statetree.agentic.windows_job') is not None, 'Windows command containment is missing'
+E       AssertionError: Windows command containment is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa83831fb00>('statetree.agentic.windows_job')
+E        +    where <function find_spec at 0x7fa83831fb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_windows_job.py:7: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_agentic_windows_job.py::test_job_is_noninheritable_and_terminates_children_when_worker_exits - AssertionError: Windows command containment is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa83831fb00>('statetree.agentic.windows_job')
+ +    where <function find_spec at 0x7fa83831fb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_windows_job.py::test_assignment_failure_never_runs_uncontained - AssertionError: Windows command containment is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa83831fb00>('statetree.agentic.windows_job')
+ +    where <function find_spec at 0x7fa83831fb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+2 failed in 0.08s

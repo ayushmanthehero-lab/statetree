@@ -1,0 +1,10 @@
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing /mnt/data/statetree-work/statetree-main
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: statetree
+  Building wheel for statetree (pyproject.toml): started
+  Building wheel for statetree (pyproject.toml): finished with status 'done'
+  Created wheel for statetree: filename=statetree-0.3.0-py3-none-any.whl size=158636 sha256=5686f33c74fe700fbb31f9f77eb2cf279173c6dbb9d5e6f947710865f61b45a2
+  Stored in directory: /tmp/pip-ephem-wheel-cache-u6e7kyrj/wheels/8a/b9/56/8e74aa4d47f5cd71e9d318e1d02d209172275e4fcb96d866d3
+Successfully built statetree

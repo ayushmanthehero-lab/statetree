@@ -1,0 +1,22 @@
+......................F...                        [100%]
+=================================== FAILURES ===================================
+_ DownloadResumeTests.test_custom_install_does_not_claim_pinned_asset_provenance _
+
+self = <tests.test_local_gpu.DownloadResumeTests testMethod=test_custom_install_does_not_claim_pinned_asset_provenance>
+
+    def test_custom_install_does_not_claim_pinned_asset_provenance(self):
+        server=self.root/'custom-server'; server.write_text('not executed by installer')
+        model=self.root/'custom.gguf'; model.write_bytes(b'GGUF'+b'\x03\x00\x00\x00'+b'x'*24)
+        with patch.object(self.dl,'urlopen',side_effect=AssertionError('no downloads')):
+            manifest=self.dl.install(self.root/'cache',server=server,model=model)
+>       self.assertEqual(manifest['binary_release'],'custom')
+E       AssertionError: 'b11064' != 'custom'
+E       - b11064
+E       + custom
+
+tests/test_local_gpu.py:299: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_local_gpu.py::DownloadResumeTests::test_custom_install_does_not_claim_pinned_asset_provenance - AssertionError: 'b11064' != 'custom'
+- b11064
++ custom
+1 failed, 25 passed, 23 subtests passed in 3.47s

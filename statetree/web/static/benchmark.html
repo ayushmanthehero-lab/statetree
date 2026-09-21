@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A live StateTree example: recall a project decision from a commit note and compare real Qwen token usage.">
+  <title>StateTree · Remember the decision</title>
+  <link rel="stylesheet" href="/static/benchmark.css">
+  <script src="/static/benchmark.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="topbar"><a class="wordmark" href="/" aria-label="StateTree home"><span class="mark" aria-hidden="true">⑂</span> StateTree</a><span class="eyebrow">LIVE HYBRID DEMO</span></header>
+    <section class="intro">
+      <p class="eyebrow accent">PROJECT MEMORY, ONE COMMIT AT A TIME</p>
+      <h1>Remember the decision.<br><span>Carry less history.</span></h1>
+      <p class="lead">Give Qwen the same question twice: once with a seeded conversation, then with a relevant StateTree commit note. Compare the input tokens the model actually reports.</p>
+    </section>
+    <section class="fixture panel" aria-labelledby="fixture-title">
+      <div><p class="eyebrow">THE FIXED EXAMPLE</p><h2 id="fixture-title">What is the agreed export retention period?</h2><p>A project discussion records <strong>7 days</strong>, followed by unrelated design decisions. StateTree recalls a caller-written note containing that same fact.</p></div>
+      <div class="note"><span class="eyebrow">COMMIT NOTE</span><p>Export retention is 7 days. Completed export files are deleted after 7 days.</p><span class="small">Authored fixture · no summarization model call</span></div>
+    </section>
+    <section class="run-controls" aria-label="Run comparison">
+      <div><label for="access-code">Demo access code</label><input id="access-code" type="password" autocomplete="off" maxlength="256" placeholder="Provided by the operator"></div>
+      <button id="run-button" type="button">Run live comparison <span aria-hidden="true">↗</span></button>
+      <p class="small">Two live inferences. Allow about a minute; a slow or offline PC can cause a timeout.</p>
+    </section>
+    <p id="status" class="status" role="status" aria-live="polite">Ready when the operator’s model and tunnel are online.</p>
+    <section class="results" aria-label="Comparison results">
+      <article class="result panel"><div class="card-top"><span class="eyebrow">01 / CONVERSATION HISTORY</span><span id="baseline-check" class="badge">Waiting</span></div><h2>Baseline</h2><p class="small">The question and all seeded conversation turns.</p><div class="metric"><span id="baseline-input">—</span><small>input tokens</small></div><div class="details"><span>Output <b id="baseline-output-tokens">—</b></span><span>Cached input <b id="baseline-cache">—</b></span></div><p class="eyebrow answer-label">MODEL ANSWER</p><p id="baseline-answer" class="answer">The live answer will appear here.</p></article>
+      <article class="result panel selected"><div class="card-top"><span class="eyebrow">02 / COMMIT CONTEXT</span><span id="statetree-check" class="badge">Waiting</span></div><h2>With StateTree</h2><p class="small">The question, selected note and StateTree overhead.</p><div class="metric"><span id="statetree-input">—</span><small>input tokens</small></div><div class="details"><span>Output <b id="statetree-output-tokens">—</b></span><span>Cached input <b id="statetree-cache">—</b></span></div><p class="eyebrow answer-label">MODEL ANSWER</p><p id="statetree-answer" class="answer">The live answer will appear here.</p></article>
+    </section>
+    <section id="comparison" class="comparison panel" aria-live="polite"><strong id="saving">Measured results will appear after the run.</strong><p id="comparison-note">Unknown usage and failed answers stay visible. A negative reduction means this example used more input tokens.</p></section>
+    <details id="report-details" class="report-details" hidden><summary>Inspect the complete report</summary><p class="small">Includes provider counts, task checks and selected commit IDs. This report is not a resumable agent session.</p><pre id="raw-report"></pre></details>
+    <section class="how-it-runs" aria-labelledby="architecture-title"><p class="eyebrow">HOW THIS DEPLOYMENT RUNS</p><h2 id="architecture-title">AWS hosts the app. Your PC runs Qwen.</h2><ol class="flow"><li><b>Browser</b><span>Fixed comparison</span></li><li><b>ECS</b><span>StateTree + Strands</span></li><li><b>SageMaker</b><span>Serverless gateway</span></li><li><b>Local PC</b><span>Qwen via HTTPS tunnel</span></li></ol><p class="small">The operator’s PC, model process and tunnel must stay online. Completed cloud reports are stored privately in S3; an interrupted run does not resume after a worker restart. Report links act as unguessable access links.</p></section>
+    <footer><span>StateTree · Git-like memory for AI agents</span><p>This is one fixed example, not a general savings benchmark. Both histories are authored fixtures. Counts include cached input; token reduction is not a claim about cloud bills, model speed or competition eligibility.</p></footer>
+  </main>
+</body>
+</html>

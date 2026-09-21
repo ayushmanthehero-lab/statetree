@@ -1,0 +1,18 @@
+StateTree custom SageMaker CPU image
+
+llama.cpp b10433, commit 9b05354ec6fb58b4e665e9a39ebc40285c015638
+Source: https://github.com/ggml-org/llama.cpp/tree/b10433
+License: MIT (included as llama.cpp-LICENSE in this directory).
+
+Model: Qwen/Qwen3.5-4B by the Qwen team, Alibaba Cloud.
+Source: https://huggingface.co/Qwen/Qwen3.5-4B
+Quantization: unsloth/Qwen3.5-4B-GGUF, Q4_K_M, by Unsloth.
+Revision: 720bb031aae5488eae5d6a78768e6d826662b2ae
+File: Qwen3.5-4B-Q4_K_M.gguf
+SHA256: 00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4
+License: Apache License 2.0 (included as Qwen3.5-4B-LICENSE.txt).
+The quantizer's pinned model card is included as Qwen3.5-4B-MODEL-CARD.md.
+
+This custom image is compiled for Graviton2 / Neoverse-N1. It is not an
+AWS Deep Learning Container and makes no AWS certification claim.
+The Python supervisor and nginx configuration are StateTree project code.

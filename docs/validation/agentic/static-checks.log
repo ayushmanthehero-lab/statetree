@@ -1,0 +1,6 @@
+COMMAND: /opt/pyvenv/bin/python -m compileall -q statetree tests scripts/apply_agentic_update.py
+EXIT: 0
+COMMAND: node --check statetree/web/static/agentic.js
+EXIT: 0
+COMMAND: node --check statetree/web/static/workbench.js
+EXIT: 0

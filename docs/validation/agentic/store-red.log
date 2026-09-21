@@ -1,0 +1,543 @@
+FFFFFFFFFFFFFFFFF                                                        [100%]
+=================================== FAILURES ===================================
+________________ test_retries_share_id_and_new_task_is_explicit ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_retries_share_id_and_new_0')
+
+    def test_retries_share_id_and_new_task_is_explicit(tmp_path):
+>       repo, s, t, _ = components(tmp_path)
+                        ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+_______________ test_receipt_is_immutable_and_survives_reopening _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_receipt_is_immutable_and_0')
+
+    def test_receipt_is_immutable_and_survives_reopening(tmp_path):
+>       repo,s,t,_ = components(tmp_path)
+                     ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+_____________________ test_real_write_edit_read_and_replay _____________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_real_write_edit_read_and_0')
+
+    def test_real_write_edit_read_and_replay(tmp_path):
+>       repo,s,t,tools = components(tmp_path)
+                         ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+___________ test_private_and_escaping_paths_rejected[../outside.py] ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_private_and_escaping_path0')
+path = '../outside.py'
+
+    @pytest.mark.parametrize('path',['../outside.py','.statetree/a','.env','C:/data.py','a\\b','.git/config'])
+    def test_private_and_escaping_paths_rejected(tmp_path,path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+____________ test_private_and_escaping_paths_rejected[.statetree/a] ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_private_and_escaping_path1')
+path = '.statetree/a'
+
+    @pytest.mark.parametrize('path',['../outside.py','.statetree/a','.env','C:/data.py','a\\b','.git/config'])
+    def test_private_and_escaping_paths_rejected(tmp_path,path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+________________ test_private_and_escaping_paths_rejected[.env] ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_private_and_escaping_path2')
+path = '.env'
+
+    @pytest.mark.parametrize('path',['../outside.py','.statetree/a','.env','C:/data.py','a\\b','.git/config'])
+    def test_private_and_escaping_paths_rejected(tmp_path,path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+_____________ test_private_and_escaping_paths_rejected[C:/data.py] _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_private_and_escaping_path3')
+path = 'C:/data.py'
+
+    @pytest.mark.parametrize('path',['../outside.py','.statetree/a','.env','C:/data.py','a\\b','.git/config'])
+    def test_private_and_escaping_paths_rejected(tmp_path,path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+________________ test_private_and_escaping_paths_rejected[a\\b] ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_private_and_escaping_path4')
+path = 'a\\b'
+
+    @pytest.mark.parametrize('path',['../outside.py','.statetree/a','.env','C:/data.py','a\\b','.git/config'])
+    def test_private_and_escaping_paths_rejected(tmp_path,path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+____________ test_private_and_escaping_paths_rejected[.git/config] _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_private_and_escaping_path5')
+path = '.git/config'
+
+    @pytest.mark.parametrize('path',['../outside.py','.statetree/a','.env','C:/data.py','a\\b','.git/config'])
+    def test_private_and_escaping_paths_rejected(tmp_path,path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+__________________________ test_symlink_not_followed ___________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_symlink_not_followed0')
+
+    def test_symlink_not_followed(tmp_path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+_______________ test_native_execution_requires_explicit_consent ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_native_execution_requires0')
+
+    def test_native_execution_requires_explicit_consent(tmp_path):
+>       repo,s,t,tools=components(tmp_path,False)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+____________ test_python_command_replay_does_not_repeat_side_effect ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_python_command_replay_doe0')
+
+    def test_python_command_replay_does_not_repeat_side_effect(tmp_path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+___________ test_dispatched_command_without_receipt_is_not_repeated ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_dispatched_command_withou0')
+
+    def test_dispatched_command_without_receipt_is_not_repeated(tmp_path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+___________________ test_write_reconciles_effect_receipt_gap ___________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_write_reconciles_effect_r0')
+
+    def test_write_reconciles_effect_receipt_gap(tmp_path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+_______________ test_write_conflict_after_crash_requires_review ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_write_conflict_after_cras0')
+
+    def test_write_conflict_after_crash_requires_review(tmp_path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+____________________ test_receipts_paged_not_whole_history _____________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_receipts_paged_not_whole_0')
+
+    def test_receipts_paged_not_whole_history(tmp_path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+_________________ test_bad_tool_arguments_are_receipted_errors _________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_bad_tool_arguments_are_re0')
+
+    def test_bad_tool_arguments_are_receipted_errors(tmp_path):
+>       repo,s,t,tools=components(tmp_path)
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_agentic_store_tools.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_agentic_store_tools.py:19: in components
+    store = module('store').TaskStore(repo)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'store'
+
+    def module(name):
+>       assert importlib.util.find_spec('statetree.agentic') is not None, 'Durable agent package is missing'
+E       AssertionError: Durable agent package is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+E        +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_store_tools.py:12: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_agentic_store_tools.py::test_retries_share_id_and_new_task_is_explicit - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_receipt_is_immutable_and_survives_reopening - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_real_write_edit_read_and_replay - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_private_and_escaping_paths_rejected[../outside.py] - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_private_and_escaping_paths_rejected[.statetree/a] - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_private_and_escaping_paths_rejected[.env] - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_private_and_escaping_paths_rejected[C:/data.py] - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_private_and_escaping_paths_rejected[a\\b] - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_private_and_escaping_paths_rejected[.git/config] - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_symlink_not_followed - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_native_execution_requires_explicit_consent - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_python_command_replay_does_not_repeat_side_effect - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_dispatched_command_without_receipt_is_not_repeated - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_write_reconciles_effect_receipt_gap - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_write_conflict_after_crash_requires_review - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_receipts_paged_not_whole_history - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_store_tools.py::test_bad_tool_arguments_are_receipted_errors - AssertionError: Durable agent package is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fcf64afbb00>('statetree.agentic')
+ +    where <function find_spec at 0x7fcf64afbb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+17 failed in 0.19s

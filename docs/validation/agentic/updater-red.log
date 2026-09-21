@@ -1,0 +1,206 @@
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+__________ test_source_update_preserves_user_state_and_creates_backup __________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_source_update_preserves_u0')
+
+    def test_source_update_preserves_user_state_and_creates_backup(tmp_path):
+>       m=installer(); repo=target(tmp_path)
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+________________ test_modified_source_refused_before_any_write _________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_modified_source_refused_b0')
+
+    def test_modified_source_refused_before_any_write(tmp_path):
+>       m=installer(); repo=target(tmp_path); (repo/'statetree/project.py').write_text('# my edits')
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+_________ test_zip_does_not_touch_private_or_escaping_paths[../escape] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_zip_does_not_touch_privat0')
+name = '../escape'
+
+    @pytest.mark.parametrize('name',['../escape','.statetree/state.json','.venv/python','.git/config','statetree/../escape'])
+    def test_zip_does_not_touch_private_or_escaping_paths(tmp_path,name):
+>       m=installer(); repo=target(tmp_path)
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+___ test_zip_does_not_touch_private_or_escaping_paths[.statetree/state.json] ___
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_zip_does_not_touch_privat1')
+name = '.statetree/state.json'
+
+    @pytest.mark.parametrize('name',['../escape','.statetree/state.json','.venv/python','.git/config','statetree/../escape'])
+    def test_zip_does_not_touch_private_or_escaping_paths(tmp_path,name):
+>       m=installer(); repo=target(tmp_path)
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+_______ test_zip_does_not_touch_private_or_escaping_paths[.venv/python] ________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_zip_does_not_touch_privat2')
+name = '.venv/python'
+
+    @pytest.mark.parametrize('name',['../escape','.statetree/state.json','.venv/python','.git/config','statetree/../escape'])
+    def test_zip_does_not_touch_private_or_escaping_paths(tmp_path,name):
+>       m=installer(); repo=target(tmp_path)
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+________ test_zip_does_not_touch_private_or_escaping_paths[.git/config] ________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_zip_does_not_touch_privat3')
+name = '.git/config'
+
+    @pytest.mark.parametrize('name',['../escape','.statetree/state.json','.venv/python','.git/config','statetree/../escape'])
+    def test_zip_does_not_touch_private_or_escaping_paths(tmp_path,name):
+>       m=installer(); repo=target(tmp_path)
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+____ test_zip_does_not_touch_private_or_escaping_paths[statetree/../escape] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_zip_does_not_touch_privat4')
+name = 'statetree/../escape'
+
+    @pytest.mark.parametrize('name',['../escape','.statetree/state.json','.venv/python','.git/config','statetree/../escape'])
+    def test_zip_does_not_touch_private_or_escaping_paths(tmp_path,name):
+>       m=installer(); repo=target(tmp_path)
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+________________________ test_payload_tampering_refused ________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-12/test_payload_tampering_refused0')
+
+    def test_payload_tampering_refused(tmp_path):
+>       m=installer(); repo=target(tmp_path)
+          ^^^^^^^^^^^
+
+tests/test_agentic_update_installer.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def installer():
+        path=Path(__file__).resolve().parents[1]/'scripts/apply_agentic_update.py'
+>       assert path.exists(),'Safe source-only updater is missing'
+E       AssertionError: Safe source-only updater is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+
+tests/test_agentic_update_installer.py:11: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_agentic_update_installer.py::test_source_update_preserves_user_state_and_creates_backup - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+FAILED tests/test_agentic_update_installer.py::test_modified_source_refused_before_any_write - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+FAILED tests/test_agentic_update_installer.py::test_zip_does_not_touch_private_or_escaping_paths[../escape] - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+FAILED tests/test_agentic_update_installer.py::test_zip_does_not_touch_private_or_escaping_paths[.statetree/state.json] - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+FAILED tests/test_agentic_update_installer.py::test_zip_does_not_touch_private_or_escaping_paths[.venv/python] - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+FAILED tests/test_agentic_update_installer.py::test_zip_does_not_touch_private_or_escaping_paths[.git/config] - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+FAILED tests/test_agentic_update_installer.py::test_zip_does_not_touch_private_or_escaping_paths[statetree/../escape] - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+FAILED tests/test_agentic_update_installer.py::test_payload_tampering_refused - AssertionError: Safe source-only updater is missing
+assert False
+ +  where False = exists()
+ +    where exists = PosixPath('/mnt/data/agent_work/statetree-gtx1650/scripts/apply_agentic_update.py').exists
+8 failed in 0.12s

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "statetree"
+version = "0.3.1"
+description = "Portable agent state, durable local execution, bounded memory and verified worktree branches"
+requires-python = ">=3.11"
+dependencies = ["strands-agents==1.56.0"]
+
+[project.scripts]
+statetree = "statetree.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+frameworks = ["langgraph==1.2.11", "crewai==1.15.22"]
+sagemaker = ["boto3>=1.43.98,<2"]
+
+[tool.setuptools.packages.find]
+include = ["statetree*"]
+
+[tool.setuptools.package-data]
+"statetree.web" = ["static/*"]

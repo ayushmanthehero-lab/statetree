@@ -1,0 +1,118 @@
+{
+  "kind": "statetree-local-component-demo",
+  "fixture": "Authored policy and unrelated conversations",
+  "project": "/mnt/data/statetree-release-demo/project",
+  "checks": {
+    "checkpoint_restore": true,
+    "fact_recall": true,
+    "archive_preservation": true,
+    "recovery": true,
+    "public_state_handoff": true,
+    "verified_merge": true,
+    "portable_round_trip": true
+  },
+  "provider_requests": 0,
+  "context_comparison": {
+    "counting_method": "utf8_bytes_estimate",
+    "provider_tokens": null,
+    "full_authored_history_bytes": 17443,
+    "bounded_history_request_bytes": 5414,
+    "new_task_recall_request_bytes": 2578,
+    "selected_commit_ids": [
+      "11e82ad0aeba1b6be0e68419a8143742f88eecdab7dacb25b4bc2f10109e2ebf",
+      "a80fbb496ab46de088e408ccd44c7be0a6bbeb449abcb9cac4a01b0227312538",
+      "b1578c76256f3f8f3a63260b3ea56817953a3de2d1bcdceae77bb5728069be2e"
+    ],
+    "model_task_success": null,
+    "caveat": "Prepared-request bytes, not measured model token savings, answer quality, cost, energy or water."
+  },
+  "speculation": {
+    "winner": "conservative",
+    "report_id": "b666e541cffdf706990d4affd184abd01e653f7fc70e7ecc3fc7f610860126c9",
+    "attempts": [
+      {
+        "name": "alternative",
+        "path": "/mnt/data/statetree-release-demo/project/.statetree/project/parallel/worktrees/alternative-cdc6f967c7a14f20a87950a3a5fbadf3",
+        "candidate_id": "1262bb7a1cebf41dda248cd2f232a9249108543a2d9d5aabc8bd8c7137648676",
+        "score": 1,
+        "error": null,
+        "verified": true,
+        "usage": {
+          "requests": 0,
+          "known_usage_requests": 0,
+          "unknown_usage_requests": 0,
+          "ambiguous_usage_requests": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "reported_input_tokens": 0,
+          "reported_output_tokens": 0,
+          "reported_total_tokens": 0,
+          "reported_cache_read_input_tokens": 0,
+          "reported_cache_write_input_tokens": 0
+        }
+      },
+      {
+        "name": "conservative",
+        "path": "/mnt/data/statetree-release-demo/project/.statetree/project/parallel/worktrees/conservative-23148def2809432b9d8dc1ffb6b5425a",
+        "candidate_id": "44192e1145a87a34dac0745eec06d8bd9fb710d91c0c34be9427540ff99101a8",
+        "score": 2,
+        "error": null,
+        "verified": true,
+        "usage": {
+          "requests": 0,
+          "known_usage_requests": 0,
+          "unknown_usage_requests": 0,
+          "ambiguous_usage_requests": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "reported_input_tokens": 0,
+          "reported_output_tokens": 0,
+          "reported_total_tokens": 0,
+          "reported_cache_read_input_tokens": 0,
+          "reported_cache_write_input_tokens": 0
+        }
+      }
+    ]
+  },
+  "public_state_binding": {
+    "kind": "public-state-model-binding",
+    "from_model": {
+      "context_window_limit": 8192,
+      "max_tokens": 512,
+      "model_id": "Qwen/Qwen3.5-4B",
+      "url": "http://127.0.0.1:8080/v1/chat/completions"
+    },
+    "to_model": {
+      "context_window_limit": 8192,
+      "max_tokens": 512,
+      "model_id": "another-local-model",
+      "url": "http://127.0.0.1:8081/v1/chat/completions"
+    },
+    "previous_checkpoint": "8ac05527446f03ff5194a54af9723e99562bfc232192912d7321aa9c5f5754e0",
+    "model_invoked": false,
+    "checkpoint_id": "9340e06d8a5856bf1dd307f675be33182bd85eee59834e185f4ee4bc173705f2",
+    "archive_id": "4a0f64a04444ad223853c12b8fc487b4f5be6ee9b203acbf79d26d48b7bf4691"
+  },
+  "usage": {
+    "requests": 0,
+    "known_usage_requests": 0,
+    "unknown_usage_requests": 0,
+    "ambiguous_usage_requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "reported_input_tokens": 0,
+    "reported_output_tokens": 0,
+    "reported_total_tokens": 0,
+    "reported_cache_read_input_tokens": 0,
+    "reported_cache_write_input_tokens": 0
+  }
+}

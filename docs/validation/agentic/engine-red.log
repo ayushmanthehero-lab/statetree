@@ -1,0 +1,179 @@
+FFFFFFF                                                                  [100%]
+=================================== FAILURES ===================================
+____________________ test_file_command_checkpoint_sequence _____________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_file_command_checkpoint_s0')
+
+    def test_file_command_checkpoint_sequence(tmp_path):
+>       E=engine_module(); repo,s=fixture(tmp_path)
+          ^^^^^^^^^^^^^^^
+
+tests/test_agentic_engine.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def engine_module():
+>       assert importlib.util.find_spec('statetree.agentic.engine') is not None, 'Resumable engine is missing'
+E       AssertionError: Resumable engine is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+E        +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_engine.py:11: AssertionError
+________ test_network_failure_resume_does_not_reexecute_completed_write ________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_network_failure_resume_do0')
+
+    def test_network_failure_resume_does_not_reexecute_completed_write(tmp_path):
+>       E=engine_module(); repo,s=fixture(tmp_path)
+          ^^^^^^^^^^^^^^^
+
+tests/test_agentic_engine.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def engine_module():
+>       assert importlib.util.find_spec('statetree.agentic.engine') is not None, 'Resumable engine is missing'
+E       AssertionError: Resumable engine is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+E        +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_engine.py:11: AssertionError
+___ test_crash_after_receipt_before_checkpoint_repaired_without_tool_replay ____
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_crash_after_receipt_befor0')
+
+    def test_crash_after_receipt_before_checkpoint_repaired_without_tool_replay(tmp_path):
+>       E=engine_module(); repo,s=fixture(tmp_path)
+          ^^^^^^^^^^^^^^^
+
+tests/test_agentic_engine.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def engine_module():
+>       assert importlib.util.find_spec('statetree.agentic.engine') is not None, 'Resumable engine is missing'
+E       AssertionError: Resumable engine is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+E        +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_engine.py:11: AssertionError
+_____________ test_saved_pending_batch_continues_from_second_tool ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_saved_pending_batch_conti0')
+
+    def test_saved_pending_batch_continues_from_second_tool(tmp_path):
+>       E=engine_module(); repo,s=fixture(tmp_path)
+          ^^^^^^^^^^^^^^^
+
+tests/test_agentic_engine.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def engine_module():
+>       assert importlib.util.find_spec('statetree.agentic.engine') is not None, 'Resumable engine is missing'
+E       AssertionError: Resumable engine is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+E        +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_engine.py:11: AssertionError
+___________________ test_truncated_tool_call_never_executes ____________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_truncated_tool_call_never0')
+
+    def test_truncated_tool_call_never_executes(tmp_path):
+>       E=engine_module(); repo,s=fixture(tmp_path)
+          ^^^^^^^^^^^^^^^
+
+tests/test_agentic_engine.py:111: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def engine_module():
+>       assert importlib.util.find_spec('statetree.agentic.engine') is not None, 'Resumable engine is missing'
+E       AssertionError: Resumable engine is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+E        +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_engine.py:11: AssertionError
+______________ test_rolling_note_retains_plan_not_full_transcript ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_rolling_note_retains_plan0')
+
+    def test_rolling_note_retains_plan_not_full_transcript(tmp_path):
+>       E=engine_module(); repo,s=fixture(tmp_path)
+          ^^^^^^^^^^^^^^^
+
+tests/test_agentic_engine.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def engine_module():
+>       assert importlib.util.find_spec('statetree.agentic.engine') is not None, 'Resumable engine is missing'
+E       AssertionError: Resumable engine is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+E        +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_engine.py:11: AssertionError
+___________ test_restored_project_checkpoint_blocks_old_task_resume ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_restored_project_checkpoi0')
+
+    def test_restored_project_checkpoint_blocks_old_task_resume(tmp_path):
+>       E=engine_module(); repo,s=fixture(tmp_path)
+          ^^^^^^^^^^^^^^^
+
+tests/test_agentic_engine.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def engine_module():
+>       assert importlib.util.find_spec('statetree.agentic.engine') is not None, 'Resumable engine is missing'
+E       AssertionError: Resumable engine is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+E        +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_agentic_engine.py:11: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_agentic_engine.py::test_file_command_checkpoint_sequence - AssertionError: Resumable engine is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+ +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_engine.py::test_network_failure_resume_does_not_reexecute_completed_write - AssertionError: Resumable engine is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+ +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_engine.py::test_crash_after_receipt_before_checkpoint_repaired_without_tool_replay - AssertionError: Resumable engine is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+ +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_engine.py::test_saved_pending_batch_continues_from_second_tool - AssertionError: Resumable engine is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+ +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_engine.py::test_truncated_tool_call_never_executes - AssertionError: Resumable engine is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+ +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_engine.py::test_rolling_note_retains_plan_not_full_transcript - AssertionError: Resumable engine is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+ +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+FAILED tests/test_agentic_engine.py::test_restored_project_checkpoint_blocks_old_task_resume - AssertionError: Resumable engine is missing
+assert None is not None
+ +  where None = <function find_spec at 0x7fa7efd1bb00>('statetree.agentic.engine')
+ +    where <function find_spec at 0x7fa7efd1bb00> = <module 'importlib.util' (frozen)>.find_spec
+ +      where <module 'importlib.util' (frozen)> = importlib.util
+7 failed in 0.14s

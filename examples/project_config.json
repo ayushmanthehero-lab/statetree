@@ -1,0 +1,16 @@
+{
+  "context_budget": 8000,
+  "note_budget": 2000,
+  "fact_budget": 2000,
+  "recent_turns": 2,
+  "total_token_limit": 25000,
+  "verification_commands": [["python", "-m", "pytest", "-q"]],
+  "verification_timeout": 300,
+  "model": {
+    "model_id": "Qwen/Qwen3.5-4B",
+    "url": "http://127.0.0.1:8080/v1/chat/completions",
+    "max_tokens": 512,
+    "context_window_limit": 8192
+  },
+  "input_cache_convention": "auto"
+}

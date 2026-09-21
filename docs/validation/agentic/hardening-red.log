@@ -1,0 +1,42 @@
+...FF                                                                    [100%]
+=================================== FAILURES ===================================
+__________ test_preflight_rejection_is_not_recorded_as_provider_usage __________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-8/test_preflight_rejection_is_no0')
+
+    def test_preflight_rejection_is_not_recorded_as_provider_usage(tmp_path):
+        repo,s=fixture(tmp_path); t=s.submit('Build something')
+        server,thread,seen,config=server_at(4000)
+        try:
+            r=Engine(repo,transport=LocalTransport(config),retries=1).run(t['id'])
+            assert r['status']=='paused'
+>           assert Project(repo).usage()['requests']==0, 'No generation was sent: tokenizer requests are not model usage'
+E           AssertionError: No generation was sent: tokenizer requests are not model usage
+E           assert 1 == 0
+
+tests/test_agentic_transport.py:68: AssertionError
+__________ test_old_unknown_command_cannot_be_hidden_by_recent_tasks ___________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-8/test_old_unknown_command_canno0')
+
+    def test_old_unknown_command_cannot_be_hidden_by_recent_tasks(tmp_path):
+        from statetree.agentic.manager import TaskManager
+        repo,s=fixture(tmp_path); t=s.submit('Old uncertain command',allow_execution=True)
+        s.prepare(t['id'],'old:0','run_command',{'argv':['python','x.py']},{'argv':['python','x.py'],'timeout':30})
+        s.mark_dispatched('old:0')
+        for i in range(205): s.submit(f'Another task {i}')
+>       assert TaskManager(repo).unresolved() is not None
+E       AssertionError: assert None is not None
+E        +  where None = unresolved()
+E        +    where unresolved = <statetree.agentic.manager.TaskManager object at 0x7fb5b3d29940>.unresolved
+E        +      where <statetree.agentic.manager.TaskManager object at 0x7fb5b3d29940> = <class 'statetree.agentic.manager.TaskManager'>(PosixPath('/tmp/pytest-of-root/pytest-8/test_old_unknown_command_canno0/repo'))
+
+tests/test_agentic_engine.py:160: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_agentic_transport.py::test_preflight_rejection_is_not_recorded_as_provider_usage - AssertionError: No generation was sent: tokenizer requests are not model usage
+assert 1 == 0
+FAILED tests/test_agentic_engine.py::test_old_unknown_command_cannot_be_hidden_by_recent_tasks - AssertionError: assert None is not None
+ +  where None = unresolved()
+ +    where unresolved = <statetree.agentic.manager.TaskManager object at 0x7fb5b3d29940>.unresolved
+ +      where <statetree.agentic.manager.TaskManager object at 0x7fb5b3d29940> = <class 'statetree.agentic.manager.TaskManager'>(PosixPath('/tmp/pytest-of-root/pytest-8/test_old_unknown_command_canno0/repo'))
+2 failed, 3 passed in 2.46s

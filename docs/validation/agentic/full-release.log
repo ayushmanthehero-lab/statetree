@@ -1,0 +1,737 @@
+........................................................... [ 17%]
+..........................F.F............................................. [ 39%]
+.................................FFFFFFFF............... [ 55%]
+..........................................ss.............................. [ 77%]
+........sss...............................................FFFF.F..............     [100%]
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_agent_runner.py __________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_agent_runner.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_agent_runner.py:14: in <module>
+    from tests.helpers import ScriptedModel, git, init_repo
+tests/helpers.py:47: in __getattr__
+    from tests.model_helpers import ScriptedModel
+tests/model_helpers.py:2: in <module>
+    from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+____________________ ERROR collecting tests/test_bedrock.py ____________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_bedrock.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_bedrock.py:4: in <module>
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+statetree/models/sagemaker.py:20: in <module>
+    from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+__________________ ERROR collecting tests/test_benchmarks.py ___________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_benchmarks.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_benchmarks.py:8: in <module>
+    from tests.helpers import ScriptedModel
+tests/helpers.py:47: in __getattr__
+    from tests.model_helpers import ScriptedModel
+tests/model_helpers.py:2: in <module>
+    from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+________________ ERROR collecting tests/test_commit_context.py _________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_commit_context.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_commit_context.py:7: in <module>
+    from strands import Agent, tool
+E   ModuleNotFoundError: No module named 'strands'
+____________________ ERROR collecting tests/test_handoff.py ____________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_handoff.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_handoff.py:8: in <module>
+    from strands import Agent
+E   ModuleNotFoundError: No module named 'strands'
+__________________ ERROR collecting tests/test_hybrid_demo.py __________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_hybrid_demo.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_hybrid_demo.py:5: in <module>
+    from statetree.models.sagemaker import SageMakerModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+statetree/models/sagemaker.py:20: in <module>
+    from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+___________________ ERROR collecting tests/test_portable.py ____________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_portable.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_portable.py:8: in <module>
+    from strands import Agent
+E   ModuleNotFoundError: No module named 'strands'
+___________________ ERROR collecting tests/test_sagemaker.py ___________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_sagemaker.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_sagemaker.py:13: in <module>
+    from strands import Agent, tool
+E   ModuleNotFoundError: No module named 'strands'
+_______________ ERROR collecting tests/test_sagemaker_example.py _______________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_sagemaker_example.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_sagemaker_example.py:7: in <module>
+    from examples import sagemaker_agent
+examples/sagemaker_agent.py:14: in <module>
+    from strands import Agent, tool
+E   ModuleNotFoundError: No module named 'strands'
+________________ ERROR collecting tests/test_strands_adapter.py ________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_strands_adapter.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_strands_adapter.py:6: in <module>
+    from strands import Agent, tool
+E   ModuleNotFoundError: No module named 'strands'
+___________________ ERROR collecting tests/test_workflow.py ____________________
+ImportError while importing test module '/mnt/data/agent_work/statetree-gtx1650/tests/test_workflow.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_workflow.py:12: in <module>
+    from strands import Agent
+E   ModuleNotFoundError: No module named 'strands'
+=================================== FAILURES ===================================
+_ ChatHTTPTests.test_application_rejects_reused_benchmark_credential_for_private_chat _
+
+self = <tests.test_chat_api.ChatHTTPTests testMethod=test_application_rejects_reused_benchmark_credential_for_private_chat>
+
+    def test_application_rejects_reused_benchmark_credential_for_private_chat(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'secret.json'
+            path.write_text(json.dumps({'demo_access_code': OWNER, 'upstream_api_key': 'local-upstream-key',
+                                        'owner_access_code': OWNER, 'worker_api_key': WORKER}))
+            settings = Settings(local_secret_file=str(path), local_model_url='http://127.0.0.1:18081/invocations')
+            with self.assertRaises(ValueError):
+>               create_application(settings)
+
+tests/test_chat_api.py:392: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+statetree/web/app.py:354: in create_application
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Strands text/tool transport for SageMaker AI's OpenAI-compatible vLLM DLC.
+    
+    Uses boto3 InvokeEndpoint with an OpenAI chat-completion JSON body at
+    ``/invocations``; the container must support that contract. See
+    https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-openai-compatible.html
+    Regular InvokeEndpoint has a 60-second container-response limit. This adapter
+    buffers one nonstreaming response before emitting Strands events; it does not
+    provide token-by-token network streaming. Keep generation within that limit.
+    The default client is created on the first request, with SDK retries disabled.
+    Injected clients retain their caller-configured transport and retry policy.
+    """
+    
+    import asyncio
+    import copy
+    import json
+    import math
+    from threading import Lock
+    from time import perf_counter
+    
+>   from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+
+statetree/models/sagemaker.py:20: ModuleNotFoundError
+_ ChatHTTPTests.test_local_application_keeps_chat_durable_and_legacy_benchmark_available _
+
+self = <tests.test_chat_api.ChatHTTPTests testMethod=test_local_application_keeps_chat_durable_and_legacy_benchmark_available>
+
+    def test_local_application_keeps_chat_durable_and_legacy_benchmark_available(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'secret.json'
+            secrets = {'demo_access_code': 'legacy-demo-code', 'upstream_api_key': 'local-upstream-key'}
+            path.write_text(json.dumps(secrets))
+            settings = Settings(local_secret_file=str(path), local_model_url='http://127.0.0.1:18081/invocations')
+>           legacy = create_application(settings)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_chat_api.py:371: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+statetree/web/app.py:354: in create_application
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Strands text/tool transport for SageMaker AI's OpenAI-compatible vLLM DLC.
+    
+    Uses boto3 InvokeEndpoint with an OpenAI chat-completion JSON body at
+    ``/invocations``; the container must support that contract. See
+    https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-openai-compatible.html
+    Regular InvokeEndpoint has a 60-second container-response limit. This adapter
+    buffers one nonstreaming response before emitting Strands events; it does not
+    provide token-by-token network streaming. Keep generation within that limit.
+    The default client is created on the first request, with SDK retries disabled.
+    Injected clients retain their caller-configured transport and retry policy.
+    """
+    
+    import asyncio
+    import copy
+    import json
+    import math
+    from threading import Lock
+    from time import perf_counter
+    
+>   from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+
+statetree/models/sagemaker.py:20: ModuleNotFoundError
+________________ KernelTests.test_branch_heads_are_independent _________________
+
+self = <tests.test_kernel.KernelTests testMethod=test_branch_heads_are_independent>
+
+    def test_branch_heads_are_independent(self):
+>       first = self.verified_commit()
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_kernel.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kernel.py:36: in verified_commit
+    return self.runtime.commit(
+statetree/runtime/runtime.py:21: in guarded
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+statetree/runtime/runtime.py:134: in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+statetree/runtime/runtime.py:157: in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.helpers.OfflineAgent object at 0x7fb0574f9090>
+kwargs = {'include': ['system_prompt'], 'preset': 'session'}
+
+    def take_snapshot(self, **kwargs):
+>       from strands import Snapshot
+E       ModuleNotFoundError: No module named 'strands'
+
+tests/helpers.py:34: ModuleNotFoundError
+_______________ KernelTests.test_commit_restore_in_fresh_process _______________
+
+self = <tests.test_kernel.KernelTests testMethod=test_commit_restore_in_fresh_process>
+
+    def test_commit_restore_in_fresh_process(self):
+>       checkpoint = self.verified_commit()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_kernel.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kernel.py:36: in verified_commit
+    return self.runtime.commit(
+statetree/runtime/runtime.py:21: in guarded
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+statetree/runtime/runtime.py:134: in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+statetree/runtime/runtime.py:157: in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.helpers.OfflineAgent object at 0x7fb0574fb750>
+kwargs = {'include': ['system_prompt'], 'preset': 'session'}
+
+    def take_snapshot(self, **kwargs):
+>       from strands import Snapshot
+E       ModuleNotFoundError: No module named 'strands'
+
+tests/helpers.py:34: ModuleNotFoundError
+_ KernelTests.test_process_death_before_publication_commit_does_not_advance_refs _
+
+self = <tests.test_kernel.KernelTests testMethod=test_process_death_before_publication_commit_does_not_advance_refs>
+
+        def test_process_death_before_publication_commit_does_not_advance_refs(self):
+            script = '''
+    import os, sys
+    from tests.helpers import OfflineAgent
+    from statetree.runtime.runtime import StateTreeRuntime
+    r = StateTreeRuntime(OfflineAgent(), goal='finish', repo_path=sys.argv[1])
+    move = r.store.move_head
+    def die_before_transaction_commit(*args, **kwargs):
+        move(*args, **kwargs)
+        os._exit(17)
+    r.store.move_head = die_before_transaction_commit
+    r.commit(verified=True, verification={'passed': True})
+    '''
+            result = subprocess.run(
+                [sys.executable, '-B', '-c', script, str(self.repo)],
+                cwd=Path(__file__).resolve().parents[1], capture_output=True, text=True,
+            )
+>           self.assertEqual(result.returncode, 17, result.stderr)
+E           AssertionError: 1 != 17 : Traceback (most recent call last):
+E             File "<string>", line 11, in <module>
+E               r.commit(verified=True, verification={'passed': True})
+E               ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E             File "/mnt/data/agent_work/statetree-gtx1650/statetree/runtime/runtime.py", line 21, in guarded
+E               return method(self, *args, **kwargs)
+E             File "/mnt/data/agent_work/statetree-gtx1650/statetree/runtime/runtime.py", line 134, in commit
+E               return self._commit(current_subgoal=current_subgoal, verified=verified,
+E                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                                   verification=verification, message=message, note=note)
+E                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E             File "/mnt/data/agent_work/statetree-gtx1650/statetree/runtime/runtime.py", line 157, in _commit
+E               snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+E                          ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E             File "/mnt/data/agent_work/statetree-gtx1650/tests/helpers.py", line 34, in take_snapshot
+E               from strands import Snapshot
+E           ModuleNotFoundError: No module named 'strands'
+
+tests/test_kernel.py:133: AssertionError
+________________ KernelTests.test_restore_rewinds_branch_parent ________________
+
+self = <tests.test_kernel.KernelTests testMethod=test_restore_rewinds_branch_parent>
+
+    def test_restore_rewinds_branch_parent(self):
+>       first = self.runtime.commit()
+                ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_kernel.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+statetree/runtime/runtime.py:21: in guarded
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+statetree/runtime/runtime.py:134: in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+statetree/runtime/runtime.py:157: in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.helpers.OfflineAgent object at 0x7fb0563ed350>
+kwargs = {'include': ['system_prompt'], 'preset': 'session'}
+
+    def take_snapshot(self, **kwargs):
+>       from strands import Snapshot
+E       ModuleNotFoundError: No module named 'strands'
+
+tests/helpers.py:34: ModuleNotFoundError
+_____________ KernelTests.test_saved_manifest_is_verified_on_read ______________
+
+self = <tests.test_kernel.KernelTests testMethod=test_saved_manifest_is_verified_on_read>
+
+    def test_saved_manifest_is_verified_on_read(self):
+>       checkpoint = self.runtime.commit()
+                     ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_kernel.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+statetree/runtime/runtime.py:21: in guarded
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+statetree/runtime/runtime.py:134: in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+statetree/runtime/runtime.py:157: in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.helpers.OfflineAgent object at 0x7fb0555dab10>
+kwargs = {'include': ['system_prompt'], 'preset': 'session'}
+
+    def take_snapshot(self, **kwargs):
+>       from strands import Snapshot
+E       ModuleNotFoundError: No module named 'strands'
+
+tests/helpers.py:34: ModuleNotFoundError
+____ KernelTests.test_snapshot_tampering_rejected_before_workspace_changes _____
+
+self = <tests.test_kernel.KernelTests testMethod=test_snapshot_tampering_rejected_before_workspace_changes>
+
+    def test_snapshot_tampering_rejected_before_workspace_changes(self):
+>       checkpoint = self.verified_commit()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_kernel.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kernel.py:36: in verified_commit
+    return self.runtime.commit(
+statetree/runtime/runtime.py:21: in guarded
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+statetree/runtime/runtime.py:134: in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+statetree/runtime/runtime.py:157: in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.helpers.OfflineAgent object at 0x7fb054317f00>
+kwargs = {'include': ['system_prompt'], 'preset': 'session'}
+
+    def take_snapshot(self, **kwargs):
+>       from strands import Snapshot
+E       ModuleNotFoundError: No module named 'strands'
+
+tests/helpers.py:34: ModuleNotFoundError
+__________ KernelTests.test_stale_runtime_cannot_overwrite_newer_head __________
+
+self = <tests.test_kernel.KernelTests testMethod=test_stale_runtime_cannot_overwrite_newer_head>
+
+    def test_stale_runtime_cannot_overwrite_newer_head(self):
+        stale = StateTreeRuntime(OfflineAgent(), goal='finish', repo_path=self.repo)
+>       first = self.runtime.commit()
+                ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_kernel.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+statetree/runtime/runtime.py:21: in guarded
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+statetree/runtime/runtime.py:134: in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+statetree/runtime/runtime.py:157: in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.helpers.OfflineAgent object at 0x7fb0556007c0>
+kwargs = {'include': ['system_prompt'], 'preset': 'session'}
+
+    def take_snapshot(self, **kwargs):
+>       from strands import Snapshot
+E       ModuleNotFoundError: No module named 'strands'
+
+tests/helpers.py:34: ModuleNotFoundError
+______ KernelTests.test_unverified_progress_advances_branch_not_canonical ______
+
+self = <tests.test_kernel.KernelTests testMethod=test_unverified_progress_advances_branch_not_canonical>
+
+    def test_unverified_progress_advances_branch_not_canonical(self):
+>       first = self.runtime.commit()
+                ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_kernel.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+statetree/runtime/runtime.py:21: in guarded
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+statetree/runtime/runtime.py:134: in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+statetree/runtime/runtime.py:157: in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.helpers.OfflineAgent object at 0x7fb054360850>
+kwargs = {'include': ['system_prompt'], 'preset': 'session'}
+
+    def take_snapshot(self, **kwargs):
+>       from strands import Snapshot
+E       ModuleNotFoundError: No module named 'strands'
+
+tests/helpers.py:34: ModuleNotFoundError
+_ WorkerChatTests.test_buffered_events_over_one_batch_flush_after_worker_restart _
+
+self = <tests.test_worker_chat.WorkerChatTests testMethod=test_buffered_events_over_one_batch_flush_after_worker_restart>
+
+    def test_buffered_events_over_one_batch_flush_after_worker_restart(self):
+        task = self.submit()['task']
+        outbox = EventOutbox(self.root / 'worker' / 'outbox' / (task['id'] + '.json'))
+        for index in range(125):
+            outbox.add({'id': 'saved-' + str(index), 'type': 'status', 'text': 'persisted local step'})
+>       self.assertTrue(self.execute(self.new_worker()))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_worker_chat.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_worker_chat.py:89: in execute
+    return (worker or self.worker).run_once()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy/local_agent.py:286: in run_once
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Strands text/tool transport for SageMaker AI's OpenAI-compatible vLLM DLC.
+    
+    Uses boto3 InvokeEndpoint with an OpenAI chat-completion JSON body at
+    ``/invocations``; the container must support that contract. See
+    https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-openai-compatible.html
+    Regular InvokeEndpoint has a 60-second container-response limit. This adapter
+    buffers one nonstreaming response before emitting Strands events; it does not
+    provide token-by-token network streaming. Keep generation within that limit.
+    The default client is created on the first request, with SDK retries disabled.
+    Injected clients retain their caller-configured transport and retry policy.
+    """
+    
+    import asyncio
+    import copy
+    import json
+    import math
+    from threading import Lock
+    from time import perf_counter
+    
+>   from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+
+statetree/models/sagemaker.py:20: ModuleNotFoundError
+_ WorkerChatTests.test_cancellation_after_local_completion_cannot_leave_task_claimed_forever _
+
+self = <tests.test_worker_chat.WorkerChatTests testMethod=test_cancellation_after_local_completion_cannot_leave_task_claimed_forever>
+
+    def test_cancellation_after_local_completion_cannot_leave_task_claimed_forever(self):
+        task = self.submit()['task']
+        post = self.client.post
+        def cancel_before_completion_ack(path, payload):
+            if payload.get('status') == 'completed':
+                self.owner('/api/chat/tasks/' + task['id'] + '/cancel', {})
+            return post(path, payload)
+        self.client.post = cancel_before_completion_ack
+>       self.assertTrue(self.execute())
+                        ^^^^^^^^^^^^^^
+
+tests/test_worker_chat.py:150: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_worker_chat.py:89: in execute
+    return (worker or self.worker).run_once()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy/local_agent.py:286: in run_once
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Strands text/tool transport for SageMaker AI's OpenAI-compatible vLLM DLC.
+    
+    Uses boto3 InvokeEndpoint with an OpenAI chat-completion JSON body at
+    ``/invocations``; the container must support that contract. See
+    https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-openai-compatible.html
+    Regular InvokeEndpoint has a 60-second container-response limit. This adapter
+    buffers one nonstreaming response before emitting Strands events; it does not
+    provide token-by-token network streaming. Keep generation within that limit.
+    The default client is created on the first request, with SDK retries disabled.
+    Injected clients retain their caller-configured transport and retry policy.
+    """
+    
+    import asyncio
+    import copy
+    import json
+    import math
+    from threading import Lock
+    from time import perf_counter
+    
+>   from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+
+statetree/models/sagemaker.py:20: ModuleNotFoundError
+____ WorkerChatTests.test_checkpoint_is_visible_before_the_runner_finishes _____
+
+self = <tests.test_worker_chat.WorkerChatTests testMethod=test_checkpoint_is_visible_before_the_runner_finishes>
+
+    def test_checkpoint_is_visible_before_the_runner_finishes(self):
+        self.emit_checkpoint = True
+        self.submit()
+>       self.assertTrue(self.execute())
+                        ^^^^^^^^^^^^^^
+
+tests/test_worker_chat.py:161: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_worker_chat.py:89: in execute
+    return (worker or self.worker).run_once()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy/local_agent.py:286: in run_once
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Strands text/tool transport for SageMaker AI's OpenAI-compatible vLLM DLC.
+    
+    Uses boto3 InvokeEndpoint with an OpenAI chat-completion JSON body at
+    ``/invocations``; the container must support that contract. See
+    https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-openai-compatible.html
+    Regular InvokeEndpoint has a 60-second container-response limit. This adapter
+    buffers one nonstreaming response before emitting Strands events; it does not
+    provide token-by-token network streaming. Keep generation within that limit.
+    The default client is created on the first request, with SDK retries disabled.
+    Injected clients retain their caller-configured transport and retry policy.
+    """
+    
+    import asyncio
+    import copy
+    import json
+    import math
+    from threading import Lock
+    from time import perf_counter
+    
+>   from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+
+statetree/models/sagemaker.py:20: ModuleNotFoundError
+_ WorkerChatTests.test_new_worker_resumes_same_task_and_receives_persisted_checkpoint _
+
+self = <tests.test_worker_chat.WorkerChatTests testMethod=test_new_worker_resumes_same_task_and_receives_persisted_checkpoint>
+
+    def test_new_worker_resumes_same_task_and_receives_persisted_checkpoint(self):
+        task = self.submit()['task']
+        self.result['status'] = 'interrupted'
+>       self.assertTrue(self.execute())
+                        ^^^^^^^^^^^^^^
+
+tests/test_worker_chat.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_worker_chat.py:89: in execute
+    return (worker or self.worker).run_once()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy/local_agent.py:286: in run_once
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Strands text/tool transport for SageMaker AI's OpenAI-compatible vLLM DLC.
+    
+    Uses boto3 InvokeEndpoint with an OpenAI chat-completion JSON body at
+    ``/invocations``; the container must support that contract. See
+    https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-openai-compatible.html
+    Regular InvokeEndpoint has a 60-second container-response limit. This adapter
+    buffers one nonstreaming response before emitting Strands events; it does not
+    provide token-by-token network streaming. Keep generation within that limit.
+    The default client is created on the first request, with SDK retries disabled.
+    Injected clients retain their caller-configured transport and retry policy.
+    """
+    
+    import asyncio
+    import copy
+    import json
+    import math
+    from threading import Lock
+    from time import perf_counter
+    
+>   from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+
+statetree/models/sagemaker.py:20: ModuleNotFoundError
+_ WorkerChatTests.test_worker_executes_real_http_model_relay_events_and_owner_apply _
+
+self = <tests.test_worker_chat.WorkerChatTests testMethod=test_worker_executes_real_http_model_relay_events_and_owner_apply>
+
+    def test_worker_executes_real_http_model_relay_events_and_owner_apply(self):
+        task = self.submit()['task']
+>       self.assertTrue(self.execute())
+                        ^^^^^^^^^^^^^^
+
+tests/test_worker_chat.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_worker_chat.py:89: in execute
+    return (worker or self.worker).run_once()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy/local_agent.py:286: in run_once
+    from statetree.models.bedrock import BedrockModel
+statetree/models/__init__.py:3: in <module>
+    from .sagemaker import SageMakerModel
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """Strands text/tool transport for SageMaker AI's OpenAI-compatible vLLM DLC.
+    
+    Uses boto3 InvokeEndpoint with an OpenAI chat-completion JSON body at
+    ``/invocations``; the container must support that contract. See
+    https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-openai-compatible.html
+    Regular InvokeEndpoint has a 60-second container-response limit. This adapter
+    buffers one nonstreaming response before emitting Strands events; it does not
+    provide token-by-token network streaming. Keep generation within that limit.
+    The default client is created on the first request, with SDK retries disabled.
+    Injected clients retain their caller-configured transport and retry policy.
+    """
+    
+    import asyncio
+    import copy
+    import json
+    import math
+    from threading import Lock
+    from time import perf_counter
+    
+>   from strands.models import Model
+E   ModuleNotFoundError: No module named 'strands'
+
+statetree/models/sagemaker.py:20: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_chat_api.py::ChatHTTPTests::test_application_rejects_reused_benchmark_credential_for_private_chat - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_chat_api.py::ChatHTTPTests::test_local_application_keeps_chat_durable_and_legacy_benchmark_available - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_branch_heads_are_independent - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_commit_restore_in_fresh_process - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_process_death_before_publication_commit_does_not_advance_refs - AssertionError: 1 != 17 : Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+    r.commit(verified=True, verification={'passed': True})
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/agent_work/statetree-gtx1650/statetree/runtime/runtime.py", line 21, in guarded
+    return method(self, *args, **kwargs)
+  File "/mnt/data/agent_work/statetree-gtx1650/statetree/runtime/runtime.py", line 134, in commit
+    return self._commit(current_subgoal=current_subgoal, verified=verified,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        verification=verification, message=message, note=note)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/agent_work/statetree-gtx1650/statetree/runtime/runtime.py", line 157, in _commit
+    snapshot = self.agent.take_snapshot(preset='session', include=['system_prompt']).to_dict()
+               ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/agent_work/statetree-gtx1650/tests/helpers.py", line 34, in take_snapshot
+    from strands import Snapshot
+ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_restore_rewinds_branch_parent - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_saved_manifest_is_verified_on_read - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_snapshot_tampering_rejected_before_workspace_changes - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_stale_runtime_cannot_overwrite_newer_head - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_kernel.py::KernelTests::test_unverified_progress_advances_branch_not_canonical - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_worker_chat.py::WorkerChatTests::test_buffered_events_over_one_batch_flush_after_worker_restart - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_worker_chat.py::WorkerChatTests::test_cancellation_after_local_completion_cannot_leave_task_claimed_forever - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_worker_chat.py::WorkerChatTests::test_checkpoint_is_visible_before_the_runner_finishes - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_worker_chat.py::WorkerChatTests::test_new_worker_resumes_same_task_and_receives_persisted_checkpoint - ModuleNotFoundError: No module named 'strands'
+FAILED tests/test_worker_chat.py::WorkerChatTests::test_worker_executes_real_http_model_relay_events_and_owner_apply - ModuleNotFoundError: No module named 'strands'
+ERROR tests/test_agent_runner.py
+ERROR tests/test_bedrock.py
+ERROR tests/test_benchmarks.py
+ERROR tests/test_commit_context.py
+ERROR tests/test_handoff.py
+ERROR tests/test_hybrid_demo.py
+ERROR tests/test_portable.py
+ERROR tests/test_sagemaker.py
+ERROR tests/test_sagemaker_example.py
+ERROR tests/test_strands_adapter.py
+ERROR tests/test_workflow.py
+15 failed, 321 passed, 5 skipped, 11 errors, 231 subtests passed in 105.60s (0:01:45)

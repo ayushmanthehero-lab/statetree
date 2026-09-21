@@ -1,0 +1,4 @@
+Explicit local-core subset; not the full SDK/provider validation suite.
+Seven legacy real-SDK cases excluded; use python -m pytest for the full suite.
+..................................................... [ 20%]
+....

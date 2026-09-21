@@ -1,0 +1,110 @@
+....F...............F.                                [100%]
+=================================== FAILURES ===================================
+_______ GPUFeatureTests.test_existing_budget_verifier_and_goal_preserved _______
+
+self = <tests.test_local_gpu.GPUFeatureTests testMethod=test_existing_budget_verifier_and_goal_preserved>
+
+    def test_existing_budget_verifier_and_goal_preserved(self):
+        from tests.test_project import repo_at
+        from statetree.project import Project
+        repo = repo_at(self.root/'repo')
+        p = Project.init(repo,goal='My existing project',config={'total_token_limit':1234,'verification_commands':[['python','--version']]})
+        p.remember('retention',7,evidence=['caller'])
+>       p = self.gpu.configure_project(repo,self.gpu.GPUProfile())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_local_gpu.py:103:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+repo = PosixPath('/tmp/tmpxo67po35/repo')
+profile = GPUProfile(context_size=4096, max_tokens=256, gpu_layers='auto', reserve_mib=768, port=8080, web_port=8765, threads=4, timeout=300, device=None)
+
+    def configure_project(repo: Path, profile: GPUProfile):
+        from statetree.cli import initialize_git
+        from statetree.project import Project, atomic_json, validate_config
+        model = {'model_id': MODEL_ID, 'url': f'http://127.0.0.1:{profile.port}/v1/chat/completions',
+                 'max_tokens': profile.max_tokens, 'context_window_limit': profile.context_size}
+        budget = profile.context_size - profile.max_tokens - 256
+        compact = {'context_budget': budget, 'note_budget': min(700, budget // 5),
+                   'fact_budget': min(600, budget // 5), 'recent_turns': 1, 'model': model}
+        repo = Path(repo).absolute()
+        if not (repo / '.statetree' / 'project' / 'project.json').exists():
+            initialize_git(repo)
+            return Project.init(repo, goal='Build and maintain StateTree', config=compact)
+        project = Project(repo)
+        if project.model_config != model:
+            # Existing public handoff archives conversation instead of deleting evidence.
+>           project.switch_model(model)
+E           TypeError: Project.switch_model() missing 1 required positional argument: 'url'
+
+statetree/local_gpu.py:135: TypeError
+___ LifecycleTests.test_launch_passes_keyword_port_and_cleans_owned_process ____
+
+self = <tests.test_local_gpu.LifecycleTests testMethod=test_launch_passes_keyword_port_and_cleans_owned_process>
+
+    def test_launch_passes_keyword_port_and_cleans_owned_process(self):
+        import os, subprocess, sys
+        from types import SimpleNamespace
+        from tests.test_project import repo_at
+        p=self.gpu.GPUProfile(port=self.free_port(),web_port=self.free_port(),timeout=5)
+        repo=repo_at(self.root/'repo')
+        actual_popen=subprocess.Popen; children=[]
+        def spawn(command, **kwargs):
+
+            if command[0] != str(self.server): return actual_popen(command, **kwargs)
+            proc=actual_popen([sys.executable,*command], **kwargs);children.append(proc);return proc
+        def serve(repo, *, port):
+            self.assertEqual(port,p.web_port)
+            self.assertEqual(os.environ['STATETREE_LOCAL_TIMEOUT'],'5')
+            self.assertTrue(os.environ['STATETREE_LOCAL_API_KEY'])
+        # Only SDK presence is bypassed for orchestration; no fake strands module is installed.
+        with patch.object(self.gpu.importlib.util,'find_spec',return_value=SimpleNamespace()), \
+             patch.object(self.gpu,'inspect_backend',return_value='CUDA0'), \
+             patch.object(self.gpu.subprocess,'Popen',side_effect=spawn), \
+             patch('statetree.web.workbench.serve',side_effect=serve), \
+             patch.dict(os.environ,{'STATETREE_LOCAL_API_KEY':'original'}):
+>           self.gpu.launch(repo,self.root/'cache',p,server=self.server,model=self.model)
+
+tests/test_local_gpu.py:247:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+statetree/local_gpu.py:264: in launch
+    serve(project.repo, profile.web_port)
+/usr/lib/python3.13/unittest/mock.py:1169: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/unittest/mock.py:1173: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <MagicMock name='serve' id='140560059798192'>
+args = (PosixPath('/tmp/tmpwrf6vef1/repo'), 33197), kwargs = {}
+effect = <function LifecycleTests.test_launch_passes_keyword_port_and_cleans_owned_process.<locals>.serve at 0x7fd6b0718900>
+
+    def _execute_mock_call(self, /, *args, **kwargs):
+        # separate from _increment_mock_call so that awaited functions are
+        # executed separately from their call, also AsyncMock overrides this method
+
+        effect = self.side_effect
+        if effect is not None:
+            if _is_exception(effect):
+                raise effect
+            elif not _callable(effect):
+                result = next(effect)
+                if _is_exception(result):
+                    raise result
+            else:
+>               result = effect(*args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+E               TypeError: LifecycleTests.test_launch_passes_keyword_port_and_cleans_owned_process.<locals>.serve() takes 1 positional argument but 2 were given
+
+/usr/lib/python3.13/unittest/mock.py:1234: TypeError
+----------------------------- Captured stdout call -----------------------------
+Loading Qwen on CUDA0. Server log: /tmp/tmpwrf6vef1/cache/logs/llama-20260921-015550-0a995b.log
+GPU offload confirmed: 24/33 layers. Other buffers/layers may use system RAM.
+Project: /tmp/tmpwrf6vef1/repo
+Context: 4096; output limit: 256. Press Ctrl+C here to stop BOTH services.
+=========================== short test summary info ============================
+FAILED tests/test_local_gpu.py::GPUFeatureTests::test_existing_budget_verifier_and_goal_preserved - TypeError: Project.switch_model() missing 1 required positional argument: 'url'
+FAILED tests/test_local_gpu.py::LifecycleTests::test_launch_passes_keyword_port_and_cleans_owned_process - TypeError: LifecycleTests.test_launch_passes_keyword_port_and_cleans_owned_process.<locals>.serve() takes 1 positional argument but 2 were given
+2 failed, 20 passed, 19 subtests passed in 3.15s
